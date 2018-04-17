@@ -12,11 +12,11 @@ u2 = User.create :name => 'Abdul', :email => 'abdominator@ga.com', :password => 
 u3 = User.create :name => 'Mac', :email => 'macandcheez@ga.com', :password => 'chicken'
 u4 = User.create :name => 'Bonny', :email => 'chocobonbons@ga.com', :password => 'chicken'
 
-Airplane.destroy_all
-a1 = Airplane.create :name => 'Boeing 747', :rows => 20, :columns => 6
-a2 = Airplane.create :name => 'Learjet', :rows => 4, :columns => 2
-a3 = Airplane.create :name => 'Airbus A380', :rows => 22, :columns => 5
-a4 = Airplane.create :name => 'Millennium Falcon', :rows => 2, :columns => 1
+Plane.destroy_all
+a1 = Plane.create :name => 'Boeing 747', :rows => 20, :columns => 6
+a2 = Plane.create :name => 'Learjet', :rows => 4, :columns => 2
+a3 = Plane.create :name => 'Airbus A380', :rows => 22, :columns => 5
+a4 = Plane.create :name => 'Millennium Falcon', :rows => 2, :columns => 1
 
 Flight.destroy_all
 f1 = Flight.create :flight_no => 'BU666', :origin => 'SYD', :destination => 'PER', :date => '01/09/2018 17:00'
