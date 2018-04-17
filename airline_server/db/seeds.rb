@@ -19,7 +19,7 @@ a3 = Airplane.create :name => 'Airbus A380', :rows => 22, :columns => 5
 a4 = Airplane.create :name => 'Millennium Falcon', :rows => 2, :columns => 1
 
 Flight.destroy_all
-f1 = Flight.create :flight_no => 'BU666', :origin => 'SYD', :destination => 'PER', :date => '01/01/2018 17:00'
+f1 = Flight.create :flight_no => 'BU666', :origin => 'SYD', :destination => 'PER', :date => '01/09/2018 17:00'
 f2 = Flight.create :flight_no => 'BU410', :origin => 'NYC', :destination => 'AUC', :date => '02/07/2018 08:00'
 f3 = Flight.create :flight_no => 'LJ100', :origin => 'SYD', :destination => 'BAL', :date => '01/08/2018 14:00'
 f4 = Flight.create :flight_no => 'BU111', :origin => 'PER', :destination => 'MEL', :date => '01/11/2018 15:00'
