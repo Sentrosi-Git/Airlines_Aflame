@@ -11,6 +11,21 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= form.label :seat %>
+    <%= form.text_field :seat, id: :seat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.collection_select :user_id, User.order(:name), :id, :name, include_blank: true  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :flight_id %>
+    <%= form.collection_select :flight_id, Flight.order(:flight_number), :id, :flight_number, include_blank: true  %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
