@@ -5,7 +5,6 @@ class FlightsController < ApplicationController
   # GET /flights.json
   def index
     @flights = Flight.all
-    end
   end
 
   # GET /flights/1
@@ -13,6 +12,11 @@ class FlightsController < ApplicationController
   def show
   end
 
+  def list
+    @x = params[:x].upcase
+    @y = params[:y].upcase
+    @flight = Flight.all
+  end
   # GET /flights/new
   def new
     @flight = Flight.new
