@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @sorted_res = @user.reservations.sort_by { |r| r.flight.date }
+    @sorted_res = @user.reservations.sort_by { |r| r.flight.departure_date }
     respond_to do |format|
       format.html # show.html.erb
       format.json { render :json => @user.to_json(:include => { :reservations => {:include => :flight } }) }
@@ -74,6 +74,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.fetch(:user, {})
+      params.fetch(:user).permit(:name, :email)
     end
 end
