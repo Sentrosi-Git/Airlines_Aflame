@@ -11,6 +11,31 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= form.label :number %>
+    <%= form.text_area :number, id: :flight_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :origin %>
+    <%= form.text_area :origin, id: :origin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :destination %>
+    <%= form.text_area :destination, id: :destination %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date, id: :departure_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :plane_id %>
+    <%= form.collection_select :plane_id, Plane.order(:name), :id, :name, include_blank: true  %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

@@ -5,6 +5,8 @@ class FlightsController < ApplicationController
   # GET /flights.json
   def index
     @flights = Flight.all
+    @flights_sorted = Flight.all.sort_by # { |f| f.departure_date }
+    @flights_sorted_rev = @flights_sorted.reverse_each
   end
 
   # GET /flights/1
@@ -74,6 +76,6 @@ class FlightsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def flight_params
-      params.fetch(:flight, {})
+      params.require(:flight).permit(:flight_number, :origin, :destination, :departure_date, :arrival_date, :plane_id)
     end
 end
