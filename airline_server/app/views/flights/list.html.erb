@@ -1,0 +1,13 @@
+<h2>List</h2<
+  <% @flight.each do |flight| %>
+    <ul>
+      <% if flight.origin == @x && flight.destination == @y %>
+      <li><%=flight.flight_number%></li>
+      <li><%=flight.origin%></li>
+      <li><%=flight.destination%></li>
+      <li><%=flight.departure_date%></li>
+      <li><%=flight.arrival_date%></li>
+      <li><%=flight.plane_id%></li>
+      <% end %>
+    </ul>
+<% end %>

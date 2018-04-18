@@ -12,6 +12,11 @@ class FlightsController < ApplicationController
   def show
   end
 
+  def list
+    @x = params[:x].upcase
+    @y = params[:y].upcase
+    @flight = Flight.all
+  end
   # GET /flights/new
   def new
     @flight = Flight.new
