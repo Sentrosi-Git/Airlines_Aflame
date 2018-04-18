@@ -5,6 +5,9 @@
 <table>
   <thead>
     <tr>
+      <th>Name</th>
+      <th>Rows</th>
+      <th>Cols</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -12,6 +15,9 @@
   <tbody>
     <% @planes.each do |plane| %>
       <tr>
+        <td><%= plane.name %></td>
+        <td><%= plane.rows %></td>
+        <td><%= plane.columns %></td>
         <td><%= link_to 'Show', plane %></td>
         <td><%= link_to 'Edit', edit_plane_path(plane) %></td>
         <td><%= link_to 'Destroy', plane, method: :delete, data: { confirm: 'Are you sure?' } %></td>
