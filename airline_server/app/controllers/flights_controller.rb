@@ -12,6 +12,7 @@ class FlightsController < ApplicationController
   # GET /flights/1
   # GET /flights/1.json
   def show
+    # @flight = Flight.find_by()
   end
 
   def list

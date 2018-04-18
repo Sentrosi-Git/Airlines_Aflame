@@ -12,23 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :number %>
-    <%= form.text_area :number, id: :flight_number %>
+    <%= form.label :flight_number %>
+    <%= form.text_area :flight_number, :class => "" %>
   </div>
 
   <div class="field">
     <%= form.label :origin %>
-    <%= form.text_area :origin, id: :origin %>
+    <%= form.text_area :origin %>
   </div>
 
   <div class="field">
     <%= form.label :destination %>
-    <%= form.text_area :destination, id: :destination %>
+    <%= form.text_area :destination %>
   </div>
 
   <div class="field">
-    <%= form.label :date %>
-    <%= form.date_select :date, id: :departure_date %>
+    <%= form.label :departure_date %>
+    <%= form.date_select :departure_date %>
   </div>
 
   <div class="field">
